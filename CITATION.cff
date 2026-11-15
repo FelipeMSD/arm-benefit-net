@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or course material, please cite it as below."
+title: "arm-benefit-net: treatment-conditioned deep learning on public oncology trial transcriptomics"
+authors:
+  - family-names: "Morillo Sanz Dias"
+    given-names: "Felipe"
+license: MIT
+repository-code: "https://github.com/FelipeMSD/arm-benefit-net"
+date-released: "2026-11-15"
+version: "0.1.0"

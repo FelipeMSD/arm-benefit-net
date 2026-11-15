@@ -1,0 +1,30 @@
+# --- Private material: conversation history, diffs, plan (never pushed) ---
+_private/
+
+# --- Data: never commit raw or processed patient-level data ---
+# Scripts in scripts/ recreate these folders from public sources.
+data_raw/
+data_processed/
+*.h5ad
+*.parquet
+*.csv.gz
+
+# --- Model artefacts / caches (large, reproducible) ---
+artifacts/
+hf_cache/
+*.pt
+*.ckpt
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

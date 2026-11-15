@@ -1,0 +1,8 @@
+features,model,mean,std,count
+genes+TMB,"PC-Cox, ridge (lifelines)",0.5911,0.03218,15
+BulkFormer+TMB,"PC-Cox, ridge (lifelines)",0.5714,0.02588,15
+TMB only,Cox,0.5673,0.03658,15
+genes+TMB,DeepCox (PyTorch),0.55,0.05069,15
+genes+TMB,Linear Cox (PyTorch),0.5459,0.04217,15
+BulkFormer+TMB,Linear Cox (PyTorch),0.5349,0.04519,15
+BulkFormer+TMB,DeepCox (PyTorch),0.5064,0.04816,15

@@ -1,0 +1,52 @@
+# =============================================================================
+# environment.yml — reproducible software environment for arm-benefit-net
+# -----------------------------------------------------------------------------
+# WHY CONDA + PINNED VERSIONS?
+#   "Good enough practices in scientific computing" (Wilson et al., 2017,
+#   PLoS Comput Biol 13:e1005510) recommend recording every dependency with its
+#   exact version, so that anyone (including future-you) can rebuild the same
+#   environment. Pinning protects results from silent library changes.
+#
+# WHY CPU-ONLY PYTORCH?
+#   The development laptop has a 2 GB NVIDIA MX110, which is too small for
+#   useful CUDA work. Every model in this repository is sized to train on a CPU
+#   in minutes. The CPU wheel is also ~10x smaller than the CUDA one.
+#   If you have a GPU, replace the --index-url line with the CUDA wheel index
+#   (see https://pytorch.org/get-started/locally/).
+#
+# HOW TO USE
+#   conda env create -f environment.yml
+#   conda activate armbenefit
+#   python -c "import torch; print(torch.__version__)"
+# =============================================================================
+name: armbenefit
+channels:
+  - conda-forge          # community channel with up-to-date scientific builds
+dependencies:
+  - python=3.11          # 3.11: widely supported by torch/transformers wheels
+  - pip
+  - pip:
+      # --- Deep learning core ------------------------------------------------
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch==2.5.1               # tensors, autograd, nn (Paszke et al., NeurIPS 2019)
+      - transformers==4.46.3       # Hugging Face model classes (Wolf et al., EMNLP 2020)
+      - huggingface_hub==0.26.5    # download pretrained weights from the Hub
+      - safetensors==0.4.5         # safe, fast weight format used by the Hub
+      - captum==0.7.0              # explainability: Integrated Gradients, etc.
+      # --- Classical ML / statistics (baselines must come first) -------------
+      - numpy==1.26.4
+      - pandas==2.2.3
+      - scipy==1.14.1
+      - scikit-learn==1.5.2        # elastic net, CV utilities, metrics
+      - lightgbm==4.5.0            # gradient boosting baseline
+      - lifelines==0.29.0          # survival analysis (Cox, C-index)
+      - statsmodels==0.14.4
+      # --- Data access --------------------------------------------------------
+      - GEOparse==2.0.4            # read GEO series (I-SPY2: GSE194040)
+      - six==1.16.0                # GEOparse imports `six` but does not declare it
+      # --- Plotting -----------------------------------------------------------
+      - matplotlib==3.9.2
+      # --- Engineering: tests, lint, notebooks ---------------------------------
+      - pytest==8.3.3
+      - ruff==0.7.4
+      - -e .                       # install this repo's package (src/armbenefit)

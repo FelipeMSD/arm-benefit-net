@@ -1,0 +1,26 @@
+# pyproject.toml — makes `src/armbenefit` an installable Python package.
+# The "src layout" stops tests from accidentally importing the local folder
+# instead of the installed package. That's a common source of
+# "works on my machine" bugs (see https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/).
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "armbenefit"
+version = "0.0.1"
+description = "Learning PyTorch on public oncology clinical-trial transcriptomics (I-SPY2, IMvigor210) with leakage-safe validation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Felipe Morillo Sanz Dias" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
