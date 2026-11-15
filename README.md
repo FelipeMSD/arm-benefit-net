@@ -1,5 +1,9 @@
 # arm-benefit-net
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24246595.svg)](https://doi.org/10.5281/zenodo.24246595)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![ci](https://github.com/FelipeMSD/arm-benefit-net/actions/workflows/ci.yml/badge.svg)](https://github.com/FelipeMSD/arm-benefit-net/actions/workflows/ci.yml)
+
 **Which trial arm is each patient most likely to respond to? Treatment-conditioned deep learning on public oncology clinical-trial transcriptomics, built step by step in PyTorch, with leakage-safe validation.**
 
 📄 **Full report (Nature-style):** [`docs/report.md`](docs/report.md) · 🎓 **Course:** [`lessons/`](lessons/)
@@ -55,6 +59,11 @@ python scripts/07_imvigor210.py             # Tables 6-7, Fig 6
 | `results/` | aggregate result tables (no patient-level data) |
 | `docs/` | report, figures, references |
 | `tests/` | unit and integration tests |
+
+## Citation
+Morillo Sanz Dias, F. (2026). *arm-benefit-net: treatment-conditioned deep learning on public oncology clinical-trial transcriptomics* (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.24246596
+
+To cite all versions, use the concept DOI: https://doi.org/10.5281/zenodo.24246595. GitHub's **"Cite this repository"** button (from `CITATION.cff`) gives BibTeX and APA.
 
 ## How it was built
 Developed with an AI coding agent (Claude Code), with every step reviewed, tested and documented by the author.

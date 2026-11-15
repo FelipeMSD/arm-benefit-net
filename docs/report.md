@@ -2,7 +2,7 @@
 
 **Felipe Morillo Sanz Dias**
 
-*Code and full reproducibility: this repository (`arm-benefit-net`). Developed with an AI coding agent (Claude Code); every step was reviewed, tested and logged.*
+*Code and full reproducibility: https://github.com/FelipeMSD/arm-benefit-net, archived at Zenodo, doi:10.5281/zenodo.24246595. Developed with an AI coding agent (Claude Code); every step was reviewed, tested and logged.*
 
 ---
 
