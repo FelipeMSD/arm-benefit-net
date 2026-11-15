@@ -1,6 +1,3 @@
-# --- Private material: conversation history, diffs, plan (never pushed) ---
-_private/
-
 # --- Data: never commit raw or processed patient-level data ---
 # Scripts in scripts/ recreate these folders from public sources.
 data_raw/

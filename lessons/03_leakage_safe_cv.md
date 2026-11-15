@@ -11,7 +11,7 @@ Our three rules:
 |---|---|---|
 | Patient-level splits, stratified by arm × subtype × pCR | `outer_folds()` | `test_folds_partition_patients` |
 | Preprocessing fitted on the training fold only | `FoldPreprocessor` (variance filter + z-score) | `test_preprocessor_never_sees_test_data` |
-| Hyperparameters tuned in an inner loop | nested CV in `scripts/04_benchmark.py` | outer test folds are never passed to tuning |
+| Hyperparameters tuned in an inner loop | nested CV in `scripts/04_benchmark_ispy2.py` | outer test folds are never passed to tuning |
 
 **Why nested CV?** If you try 20 hyperparameter settings and report the best CV score, that score is optimistically biased, because you selected it on the same data you report it on (Varma & Simon, 2006; Cawley & Talbot, 2010). The outer loop estimates performance and the inner loop chooses settings.
 

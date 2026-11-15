@@ -37,7 +37,7 @@ dependencies:
       - numpy==1.26.4
       - pandas==2.2.3
       - scipy==1.14.1
-      - scikit-learn==1.5.2        # elastic net, CV utilities, metrics
+      - scikit-learn==1.5.2        # ridge baselines, CV utilities, metrics
       - lightgbm==4.5.0            # gradient boosting baseline
       - lifelines==0.29.0          # survival analysis (Cox, C-index)
       - statsmodels==0.14.4
