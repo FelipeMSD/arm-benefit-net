@@ -1,0 +1,57 @@
+{
+  "title": "arm-benefit-net: treatment-conditioned deep learning on public oncology clinical-trial transcriptomics",
+  "upload_type": "software",
+  "version": "v0.1.0",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Morillo Sanz Dias, Felipe",
+      "orcid": "0000-0001-5232-4312"
+    }
+  ],
+  "description": "PyTorch framework and reproducible analysis asking whether pre-treatment tumour transcriptomes can identify which trial arm benefits which patient. ArmNet, a multi-task network with a shared tumour representation and one head per arm, is benchmarked against clinical, ridge, gradient-boosting and pooled neural-network models under nested, patient-level cross-validation on 741 randomised HER2-negative patients from the I-SPY2 platform trial (GEO GSE194040). Benefit is evaluated with randomisation-based interaction tests, c-for-benefit and inverse-probability-weighted policy value. Explanations use Integrated Gradients, and transfer is tested in the IMvigor210 atezolizumab cohort together with a deep Cox survival model and BulkFormer foundation-model embeddings. Includes a Nature-style report (docs/report.md) and an 11-lesson hands-on PyTorch course (lessons/). Main finding: expression improves prediction of pathologic complete response (AUC 0.765 vs 0.723 for clinical subtype), but no model identifies arm-specific benefit beyond subtype at single-trial scale. Developed with an AI coding agent (Claude Code); every step was reviewed and tested.",
+  "keywords": [
+    "PyTorch",
+    "deep learning",
+    "treatment effect heterogeneity",
+    "predictive biomarkers",
+    "clinical trials",
+    "I-SPY2",
+    "IMvigor210",
+    "breast cancer",
+    "transcriptomics",
+    "foundation models",
+    "BulkFormer",
+    "explainable AI",
+    "survival analysis",
+    "translational oncology"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1016/j.ccell.2022.05.005",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1038/nature25501",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194040",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.1016/j.cels.2026.101657",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ]
+}

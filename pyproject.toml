@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "armbenefit"
-version = "0.0.1"
+version = "0.1.0"
 description = "Learning PyTorch on public oncology clinical-trial transcriptomics (I-SPY2, IMvigor210) with leakage-safe validation."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,10 +1,29 @@
 cff-version: 1.2.0
-message: "If you use this code or course material, please cite it as below."
-title: "arm-benefit-net: treatment-conditioned deep learning on public oncology trial transcriptomics"
+message: "If you use this software or course material, please cite it using the metadata below."
+title: "arm-benefit-net: treatment-conditioned deep learning on public oncology clinical-trial transcriptomics"
+type: software
+version: "v0.1.0"
+date-released: 2026-11-15
+license: MIT
+repository-code: "https://github.com/FelipeMSD/arm-benefit-net"
 authors:
   - family-names: "Morillo Sanz Dias"
     given-names: "Felipe"
-license: MIT
-repository-code: "https://github.com/FelipeMSD/arm-benefit-net"
-date-released: "2026-11-15"
-version: "0.1.0"
+    orcid: "https://orcid.org/0000-0001-5232-4312"
+abstract: >
+  PyTorch framework and reproducible analysis asking whether pre-treatment tumour
+  transcriptomes identify which trial arm benefits which patient. A multi-task network
+  (ArmNet) is benchmarked under nested, patient-level cross-validation on 741 randomised
+  HER2-negative patients from I-SPY2 (GSE194040), with randomisation-based benefit metrics,
+  Integrated Gradients explanations, and external transfer, deep Cox survival modelling
+  and BulkFormer embeddings in IMvigor210. Includes a Nature-style report and an
+  11-lesson PyTorch course.
+keywords:
+  - PyTorch
+  - deep learning
+  - treatment effect heterogeneity
+  - predictive biomarkers
+  - clinical trials
+  - transcriptomics
+  - foundation models
+  - translational oncology
